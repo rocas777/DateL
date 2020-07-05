@@ -1,7 +1,8 @@
 # DateL 
 
 Simple class with CRUD functions and formated output, changeable in runtime, with exception handling;
-Handles both date and hours,minute;
+Handles both date and hours,minute;  
+Whenever a date input is illegal, an exception is raised of the type **DateError";
 
 ## Functions  
 
@@ -10,6 +11,11 @@ Handles both date and hours,minute;
  * 05-07-2020 17:12
  * 05-07-2020
  * 17:12
+ 
+ Such outpus are, respectively, the return of the following functions:
+ * std::string getFullDate()
+ * std::string getDate()
+ * std::string getHours()
 
 ### Configuration Functions
 Output Functions use one of three formats:
@@ -44,3 +50,9 @@ Both the separator and the format can be changed using the following functions:
 ### Implementation details
 The class is implemented on top of struct tm;  
 It uses a unix time schema, with the initial date being 01-01-1900 00:00
+
+### Dependencies
+The class depends o the following libraries:
+* sstream
+* iomanip
+* iostream
