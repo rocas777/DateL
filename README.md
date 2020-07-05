@@ -1,9 +1,15 @@
 # DateL 
 
-Simple class with some CRUD functions to use in projects where Time manipulations are made  
-Implemented on top of the c tm struct.
+Simple class with CRUD functions and formated output, changeable in runtime, with exception handling;
+Handles both date and hours,minute;
 
 ## Functions  
+
+### Output Function
+ There are three possible outputs(specific date formats(order) and separators can be changed,see **Configuration Functions** section), considering the date class is initialized with the date of 05 of July of 2020, 17 hours and 12 minutes, the possible outputs are:
+ * 05-07-2020 17:12
+ * 05-07-2020
+ * 17:12
 
 ### Configuration Functions
 Output Functions use one of three formats:
@@ -33,3 +39,8 @@ Both the separator and the format can be changed using the following functions:
 * short unsigned **getYDay()** (return day of the year)
 * short unsigned **getHour()**
 * short unsigned **getMinute()**
+
+
+### Implementation details
+The class is implemented on top of struct tm;  
+It uses a unix time schema, with the initial date being 01-01-1900 00:00
